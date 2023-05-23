@@ -3,4 +3,4 @@
 
 echo "Hello,world"
 
-# npm run lint-staged
+npm run lint-staged
