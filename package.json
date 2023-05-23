@@ -24,11 +24,6 @@
     "husky": "^8.0.3",
     "lint-staged": "^12.5.0"
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx,tsx,ts,less,md,json}": [
-      "git add"
-    ]
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-customizable"
