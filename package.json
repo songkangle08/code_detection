@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
     "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{js,ts,css,html}\"",
-    "commitlint": "commitlint --config commitlint.config.js -e -V"
+    "commitlint": "commitlint --config commitlint.config.js -e -V",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
     "cz-customizable": "^6.3.0",
+    "eslint": "^8.41.0",
     "husky": "^8.0.3",
     "lint-staged": "^12.5.0"
   },
@@ -32,6 +35,9 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx}": "npm run lint-staged:js"
   },
   "config": {
     "commitizen": {

@@ -2,3 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 echo "Hello,world"
+
+# npm run lint-staged
