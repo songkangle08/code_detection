@@ -3,5 +3,7 @@ function foo() {
 }
 
 let list = [1, 2, 3, 4, 5].map((item) => {
-  item = item * 2;
+  return (item = item * 2);
 });
+
+console.log(list, '1111');
